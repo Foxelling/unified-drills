@@ -1,4 +1,4 @@
-# Unified Drills for Mindustry
+# Unified Drills
 
 A utility mod that links adjacent drills into a shared logistics and cooling network.
 
