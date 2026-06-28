@@ -60,6 +60,10 @@ Events.run(Trigger.update, () => {
         }
         nextDrills.push(wrapper);
 
+        if (drill.liquids != null && drill.liquids.currentAmount() > 0) {
+            drill.dumpLiquid(drill.liquids.current());
+        }
+
         if (drill.items.total() === 0) continue;
 
         let pSize = drill.proximity.size;
@@ -111,10 +115,6 @@ Events.run(Trigger.update, () => {
             } else {
                 break; 
             }
-        }
-        
-        if (drill.liquids.currentAmount() > 0) {
-            drill.dumpLiquid(drill.liquids.current());
         }
     }
     
